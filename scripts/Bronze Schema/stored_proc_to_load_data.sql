@@ -1,16 +1,22 @@
 /*
-	Stored Procedure to Insert Data into Tables
+	Stored Procedure  to Load Bronze Layer Data
 
-	Purpose of the script is to insert bulk data into all the tables. 
-	Table is turncated before we insert the data.
+	Purpose of the script is to load buld data in bronze schema from a csv file. 
+	First we truncate table and than load the data in to right tables in bronze schema.
 
+	This procedure does not accept any parameters or return values.
+
+	To run:
+		EXCE bronze.load_bronze_layer_data;
+	------------------------------------------------------------------------------------
 */
 
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze_layer_data AS
 BEGIN
-	DECLARE @start_time DATETIME, @end_time DATETIME 
+	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME
 	BEGIN TRY
+		SET @batch_start_time = GETDATE();
 		PRINT '--------------------------------------';
 		PRINT 'Loading Bronze Layer For DatawareHouse';
 		PRINT '--------------------------------------';
@@ -105,6 +111,11 @@ BEGIN
 			TABLOCK
 		);
 
+		SET @batch_end_time = GETDATE();
+		PRINT '-------------------------';
+		PRINT 'Bronze layer upload completed.';
+		PRINT '>> Total Load Duration: '+ CAST(DATEDIFF(second, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds.';
+		PRINT '-------------------------';
 	END TRY
 	BEGIN CATCH
 		PRINT '----------------------';
