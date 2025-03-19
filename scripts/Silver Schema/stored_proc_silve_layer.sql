@@ -8,6 +8,7 @@ Script Purpose:
 	Actions Performed:
 		- Truncates Silver tables.
 		- Inserts transformed and cleansed data from Bronze schema into Silver schema tables.
+	
 	Table Transformations (Wherever applicable):
 		- Drived columns from existing ones, Eg. Category ID, Product Key.
 		- Map column codes to descriptiove values wherever applicable.
@@ -16,6 +17,7 @@ Script Purpose:
 		- Handling missing data.
 		- Handling invalid data.
 		- Maintaing data standardization & consistency 
+
 Parameters:
     None. 
 	  This stored procedure does not accept any parameters or return any values.
@@ -24,6 +26,7 @@ Usage Example:
     EXEC Silver.load_silver;
 ===============================================================================
 */
+
 
 CREATE OR ALTER PROCEDURE silver.load_silver_data AS
 BEGIN

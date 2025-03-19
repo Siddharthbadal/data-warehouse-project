@@ -1,4 +1,13 @@
--- Queries for data quality checks 
+/*
+	Quality Checks
+	This script is for silver layer to perform various quality checks 
+	on data for accuracy, validations, consistency and standardization on data
+	from bronze layer.  
+	-	Unwanted spaces
+	-	Null or blank values
+	-	Invalid dates
+	-	Standardized data accross column.
+*/
 
 -- finding duplicate values
 SELECT 
