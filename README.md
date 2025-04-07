@@ -23,12 +23,16 @@ Follows the Medallion Architecture for this datawarehouse. Medallion Architectur
 -   Data Analytics
 
 **Data Sources**: Import data from CSV files.
+
 **Data Quality**: Clean and manage quality for data analysis.
+
 **Intregation**: Combine data sources into a single data model designed for analysis.
+
 **Documentation**: Provide clear documentation of the data model to support business and analytics teams.
 
-For our data ware house, we created stored procedures for both bronze and silver layer.
-In gold layer process, we combine the related data from all tables to create facts and deminension tables to further data analysis. 
+
+For our datawarehouse, we created stored procedures for both bronze and silver layer.
+In gold layer process, we combine the related data from all tables to create facts and deminension table views for further data analysis. 
 
 ### Data Transformation Under Silver Layer
 Process includes following steps:
