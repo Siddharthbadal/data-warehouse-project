@@ -14,6 +14,8 @@ Follows the Medallion Architecture for this datawarehouse. Medallion Architectur
 
 **Gold Layer:** Data is further processed to turn into consumption-ready and project-specific data for reporting and analytics. This layer delivers continously updated and cleaned data to users and applications.
 
+![datawarehouse](https://raw.githubusercontent.com/Siddharthbadal/data-warehouse-project/refs/heads/main/images/datawarehouse.png)
+
 ### Process Followed
 -   SQL Development, Database Desgin and Development
 -   Data Architect 
