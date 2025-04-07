@@ -1,4 +1,4 @@
-# Data Warehouse Project
+# Data Warehouse and Analytics Project
 
 Building a data warehouse with SQL server. Includes data modeling, analytics, and ETL process. A complete analytics solution, from building data warehouse to data analysis to find business insights.
 
@@ -14,6 +14,19 @@ Follows the Medallion Architecture for this datawarehouse. Medallion Architectur
 
 **Gold Layer:** Data is further processed to turn into consumption-ready and project-specific data for reporting and analytics. This layer delivers continously updated and cleaned data to users and applications.
 
+### Process Followed
+-   SQL Development, Database Desgin and Development
+-   Data Architect 
+-   ETL
+-   Data Enginerring 
+-   Data Modeling
+-   Data Analytics
+
+**Data Sources**: Import data from CSV files.
+**Data Quality**: Clean and manage quality for data analysis.
+**Intregation**: Combine data sources into a single data model designed for analysis.
+**Documentation**: Provide clear documentation of the data model to support business and analytics teams.
+
 For our data ware house, we created stored procedures for both bronze and silver layer.
 In gold layer process, we combine the related data from all tables to create facts and deminension tables to further data analysis. 
 
@@ -25,7 +38,7 @@ Process includes following steps:
 -	Data Enrichment
 -	Derived Columns 
 
-### Data Cleaning Steps:
+### Data Cleaning:
 -	Removing Duplicates
 -	Data Filtering 
 -	Handling Missing Data
@@ -42,4 +55,6 @@ Process includes following steps:
 -   Star Schema
 -   Flat table
 -   Aggregated table
+
+
 
